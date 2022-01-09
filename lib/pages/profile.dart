@@ -4,6 +4,7 @@ import 'package:recipes_app/pages/home_page.dart';
 import 'package:recipes_app/pages/register.dart';
 import 'package:recipes_app/constants.dart';
 import 'package:recipes_app/widgets/avatar_name.dart';
+import 'package:recipes_app/widgets/profile_columns.dart';
 
 class Profile extends StatelessWidget {
   const Profile({Key? key}) : super(key: key);
@@ -48,60 +49,23 @@ class Profile extends StatelessWidget {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => HomePage()))
               },
-              child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    SizedBox(
-                      width: 15,
-                    ),
-                    Icon(Icons.info_outlined),
-                    SizedBox(
-                      width: 15,
-                    ),
-                    Text(
-                      'About us',
-                      style: TextStyle(fontSize: 16, fontFamily: 'Comfortaa'),
-                    ),
-                  ]),
+              child: ProfileColumns(iconData:'assets/images/info.png',title: 'About us',),
             ),
             GestureDetector(
               onTap: () => {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => HomePage()))
               },
-              child: Row(children: <Widget>[
-                SizedBox(
-                  width: 15,
-                ),
-                Icon(Icons.info_outlined),
-                SizedBox(
-                  width: 15,
-                ),
-                Text(
-                  'About us',
-                  style: TextStyle(fontSize: 16, fontFamily: 'Comfortaa'),
-                ),
-              ]),
+              child: ProfileColumns(iconData:'assets/images/message.png',title: 'Contact us',),
             ),
             GestureDetector(
               onTap: () => {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => HomePage()))
               },
-              child: Row(children: <Widget>[
-                SizedBox(
-                  width: 15,
-                ),
-                Icon(Icons.info_outlined),
-                SizedBox(
-                  width: 15,
-                ),
-                Text(
-                  'About us',
-                  style: TextStyle(fontSize: 16, fontFamily: 'Comfortaa'),
-                ),
-              ]),
-            )
+              child: ProfileColumns(iconData:'assets/images/info.png',title: 'Log out',),
+            ),
+
           ],
         )
         )

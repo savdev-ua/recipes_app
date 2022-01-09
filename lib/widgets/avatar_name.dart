@@ -9,35 +9,26 @@ class AvatarName extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Container(
-          height: 460,
-          child: Column(
-                children: <Widget>[
-      ClipRRect(
-            borderRadius: BorderRadius.circular(50),
-            child: Image.asset(avatar,
-              fit: BoxFit.fill,
-              height: 100,
-              width: 100,
-            ),
-      ),
-      SizedBox(
-            height: 10,
-      ),
-      Text(
-            name,
-            style: TextStyle(
-                color: kTextColor,
-                fontFamily: 'Comfortaa',
-                fontSize: 15,
-                fontWeight: FontWeight.w700),
-      ),
-      SizedBox(
-            height: 20,
-      ),
-    ]),
+    return Column(
+      children: [
+        ClipRRect(
+            borderRadius: BorderRadius.circular(50.0),
+            child:
+                Container(height: 75,width: 75,
+                    child: Image.asset(avatar,
+                      fit: BoxFit.fill,
+                    ))),
+        SizedBox(height: 5,),
+        Text(
+          name,
+          style: TextStyle(fontSize: 18,
+          fontFamily: 'Comfortaa',
+          fontWeight: FontWeight.w700,
+          color:kTextColor),
         ),
-        );
+        SizedBox(height: 15,)
+      ],
+      //    child: Text('$name'),
+    );
   }
 }
