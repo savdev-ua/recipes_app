@@ -7,9 +7,6 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text("Log in"),
-      // ),
       body: Center(
         child: Container(
           child: Column(
@@ -19,7 +16,7 @@ class Login extends StatelessWidget {
                   fontSize: 25.0,
                   color: Color(0xff7A3B38),
                   fontWeight: FontWeight.w500,
-                  fontFamily: 'Yeseva One'),),
+                  fontFamily: 'Montserrat'),),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 30.0),
                 child: TextFormField(

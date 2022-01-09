@@ -22,7 +22,7 @@ class ProfileColumns extends StatelessWidget {
              title,
              textAlign: TextAlign.center,
              style: TextStyle(
-               fontFamily:'Comfortaa',
+               fontFamily:'Montserrat',
                fontSize: 16,
                fontWeight: FontWeight.w400,
                color: kGrayColor

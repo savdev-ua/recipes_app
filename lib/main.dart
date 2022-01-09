@@ -42,10 +42,9 @@ class HomeScreen extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(
                   fontSize: 25.0,
-                  //color: TextTheme.cont
-                  color: Color(0xff7A3B38),
+                  color: kTextColor,
                   fontWeight: FontWeight.w500,
-                  fontFamily: 'Yeseva One'),
+                  fontFamily: 'Montserrat'),
             ),
             SizedBox(
               height: 20.0,

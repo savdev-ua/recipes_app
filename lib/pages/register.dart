@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:recipes_app/constants.dart';
 import 'package:recipes_app/pages/home_page.dart';
 import 'package:recipes_app/pages/login.dart';
 class Register extends StatelessWidget {
@@ -7,9 +8,6 @@ class Register extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text("Register"),
-      //),
       body: Center(
         child: Container(
           child: Column(
@@ -17,9 +15,9 @@ class Register extends StatelessWidget {
             SizedBox(height: 200,),
             Text('Register',style:TextStyle(
                 fontSize: 25.0,
-              color: Color(0xff7A3B38),
+              color: kTextColor,
               fontWeight: FontWeight.w500,
-              fontFamily: 'Yeseva One'),),
+              fontFamily: 'Montserrat'),),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 30.0),
             child: TextFormField(
