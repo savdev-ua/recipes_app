@@ -25,7 +25,7 @@ class Product extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.only(top: 5,left: 5),
                   child: Text(
-                    'Cookies',
+                    'Cookies!',
                     style: TextStyle(
                       fontSize: 16,
                       fontFamily: 'Montserrat'
