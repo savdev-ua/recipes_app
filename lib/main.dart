@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:recipes_app/pages/home_page.dart';
 import 'package:recipes_app/widgets/category_card.dart';
 import 'package:recipes_app/constants.dart';
 import 'package:recipes_app/pages/register.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
         textTheme: Theme.of(context).textTheme.apply(displayColor: kTextColor),
       ),
-      home: HomeScreen(),
+      home: HomePage(),
     );
   }
 }
