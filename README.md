@@ -6,7 +6,7 @@ Link for Behance project: <i>https://www.behance.net/gallery/133983621/Little-Su
 
 The target of completing project:
 -practise flutter layout building skills
--learn Statefull widget
+-learn Stateful widget
 
 
 
