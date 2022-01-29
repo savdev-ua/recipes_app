@@ -33,37 +33,39 @@ class HomePage extends StatelessWidget {
             page: 1,
           ),
         ),
-        body: Column(
-          children: [
-            Align(
-              alignment: Alignment.centerLeft,
-              child: HomePageText(
-                  title: 'Hello, Emily!',
-                  subtitle: 'What do you want to cook today?'),
-            ),
-            SizedBox(height: 20,),
-            Row(
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Align(
+                alignment: Alignment.centerLeft,
+                child: HomePageText(
+                    title: 'Hello, Emily!',
+                    subtitle: 'What do you want to cook today?'),
+              ),
+              SizedBox(height: 20,),
+              Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Product(),
+                    Product()
+                  ]
+              ),
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Product(),
-                  Product()
-                ]
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Product(),
-                Product(),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Product(),
-                Product(),
-              ],
-            )
-          ],
+                  Product(),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Product(),
+                  Product(),
+                ],
+              )
+            ],
+          ),
         ));
   }
 }
