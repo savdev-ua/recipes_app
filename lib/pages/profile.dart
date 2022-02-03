@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:recipes_app/pages/about_us.dart';
 import 'package:recipes_app/pages/cuper_test.dart';
 import 'package:recipes_app/pages/home_page.dart';
 import 'package:recipes_app/pages/register.dart';
@@ -47,7 +48,7 @@ class Profile extends StatelessWidget {
             GestureDetector(
               onTap: () => {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => HomePage()))
+                    MaterialPageRoute(builder: (context) => AboutUs()))
               },
               child: ProfileColumns(iconData:'assets/images/info.png',title: 'About us',),
             ),
