@@ -4,6 +4,7 @@ import 'package:recipes_app/pages/settings.dart';
 import 'package:recipes_app/pages/favorites.dart';
 import 'package:recipes_app/pages/profile.dart';
 import 'package:recipes_app/constants.dart';
+import 'package:recipes_app/constants.dart';
 
 class BottomMenu extends StatelessWidget {
   var page=0;
@@ -18,7 +19,7 @@ class BottomMenu extends StatelessWidget {
           ListTile(
             onTap:(){ Navigator.pop(context);},
             trailing: Icon(Icons.close,
-              color:Color(0xff4F5356) ,),
+              color:kGrayColor ,),
           ),
           ListTile(
             title: Text('Catalog',

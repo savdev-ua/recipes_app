@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:recipes_app/pages/home_page.dart';
 class Product extends StatelessWidget {
-  const Product({Key? key}) : super(key: key);
+  final cardName;
+  //final imageUrl;
+  const Product({Key? key,required this.cardName,/*required this.imageUrl*/}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +14,6 @@ class Product extends StatelessWidget {
           Navigator.push(context,MaterialPageRoute(
           builder: (context) => HomePage())
           )
-
           },
           child: ClipRRect(
             borderRadius: BorderRadius.circular(10),
@@ -25,7 +26,7 @@ class Product extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.only(top: 5,left: 5),
                   child: Text(
-                    'Cookies!',
+                    cardName,
                     style: TextStyle(
                       fontSize: 16,
                       fontFamily: 'Montserrat'

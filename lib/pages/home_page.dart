@@ -46,22 +46,22 @@ class HomePage extends StatelessWidget {
               Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Product(),
-                    Product()
+                    Product(cardName: 'Cookies',),
+                    Product(cardName: 'Cookies',)
                   ]
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Product(),
-                  Product(),
+                  Product(cardName: 'Cookies',),
+                  Product(cardName: 'Cookies',),
                 ],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Product(),
-                  Product(),
+                  Product(cardName: 'Cookies',),
+                  Product(cardName: 'Cookies',),
                 ],
               )
             ],
