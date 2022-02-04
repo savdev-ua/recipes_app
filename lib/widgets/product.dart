@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:recipes_app/pages/category_page.dart';
 import 'package:recipes_app/pages/home_page.dart';
 import 'package:recipes_app/constants.dart';
 class Product extends StatelessWidget {
@@ -13,7 +14,7 @@ class Product extends StatelessWidget {
         child: GestureDetector(
           onTap: ()=>{
           Navigator.push(context,MaterialPageRoute(
-          builder: (context) => HomePage())
+          builder: (context) => CategoryPage())
           )
           },
           child:Stack(
