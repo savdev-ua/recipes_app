@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:recipes_app/pages/about_us.dart';
@@ -57,20 +59,7 @@ class Profile extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-              String? encodeQueryParameters(Map<String, String> params) {
-                return params.entries
-                          .map((e) => '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}')
-                  .join('&');
-                }
-
-              final Uri emailLaunchUri = Uri(
-              scheme: 'mailto',
-              path: 'smith@example.com',
-              query: encodeQueryParameters(<String, String>{
-              'subject': 'Example Subject & Symbols are allowed!'
-              }),
-              );
-              launch(emailLaunchUri.toString());
+           _launchMailClient();
     },
               child: ProfileColumns(iconData:'assets/images/message.png',title: 'Contact us',),
             ),
@@ -91,8 +80,17 @@ class Profile extends StatelessWidget {
     );
   }
   void _launchMailClient() async {
+      final Uri params = Uri(
+        scheme: 'mailto',
+        path: 'my.mail@example.com',
+      );
+      String  url = params.toString();
+      if (await canLaunch(url)) {
+        await launch(url);
+      } else {
+        print( 'Could not launch $url');
 
-
+    }
 
 
      }
