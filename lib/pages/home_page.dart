@@ -3,7 +3,7 @@ import 'package:recipes_app/constants.dart';
 import 'package:recipes_app/widgets/bottom_menu.dart';
 import 'package:recipes_app/widgets/homepage_text.dart';
 import 'package:recipes_app/widgets/product.dart';
-
+import 'package:recipes_app/pages/profile.dart';
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -14,15 +14,21 @@ class HomePage extends StatelessWidget {
           elevation: 0,
           iconTheme: IconThemeData(color: kGrayColor),
           backgroundColor: Colors.transparent,
-          leading: Padding(
-            padding: EdgeInsets.all(6),
-            child: Container(
-              height: 35,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(50),
-                child: Image.asset(
-                  'assets/images/profile.png',
-                  fit: BoxFit.fill,
+          leading: GestureDetector(
+            onTap: (){
+            Navigator.push(context,MaterialPageRoute(
+            builder: (context) => Profile()));
+            },
+            child: Padding(
+              padding: EdgeInsets.all(6),
+              child: Container(
+                height: 35,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(50),
+                  child: Image.asset(
+                    'assets/images/profile.png',
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ),
             ),
