@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:recipes_app/pages/about_us.dart';
 import 'package:recipes_app/pages/cuper_test.dart';
 import 'package:recipes_app/pages/home_page.dart';
+import 'package:recipes_app/pages/login.dart';
 import 'package:recipes_app/pages/register.dart';
 import 'package:recipes_app/constants.dart';
 import 'package:recipes_app/widgets/avatar_name.dart';
@@ -75,8 +76,8 @@ class Profile extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () => {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => HomePage()))
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => Login()))
               },
               child: ProfileColumns(iconData:'assets/images/info.png',title: 'Log out',),
             ),

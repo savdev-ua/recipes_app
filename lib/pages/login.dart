@@ -46,7 +46,7 @@ class Login extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   child: GestureDetector(
                     onTap: () => {
-                      Navigator.push(context,MaterialPageRoute(
+                      Navigator.pushReplacement(context,MaterialPageRoute(
                           builder: (context) => HomePage()) )
                     },
                     child: Container(
